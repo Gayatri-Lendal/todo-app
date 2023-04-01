@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive sans-serif;
+}
+
+
+/* add backgrd full screen image */
+
+body {
+  height: 100vh;
+  /* background-image: url('images/back.avif');   */
+  background-color: #76448A !important;
+  background-repeat: repeat;
+  background-size: cover;
+  /* overflow: hidden; */
+  overflow: auto
+}
+
+#main-header {
+  border-radius: 5px;
+  position: center;
+}
+
+#header-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #030202;
+}
+
+
+#addToDo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 2px;
+  background-color: #4A235A ;
+}
+
+.container {
+  width: 50%;
+  margin-top: 7em;
+}
+
+.card {
+  background-color: #E8DAEF;
+}
+
+.editButton {
+  background-color: #4A235A;
+  color: white;
+}
+
+.doneButton {
+  background-color: #4A235A;
+  color: white;
+}
+
+.deleteButton {
+  background-color: #4A235A;
+  color: white;
+}
+
+
+/* 
+@media screen and (max-width:800px){
+  .container{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:500px){
+  .container{
+    width: 99%;
+  }
+} */
+
+#logo {
+  width: 10px;
+  height: 10px;
+  left: 70%;
+  margin-bottom: 0;
+  position: absolute;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  /* border: 2px solid yellow; */
+}
+
+/* .flex-child:first-child {
+  margin-right: 20px;
+}  */
+
+.todo-card {
+  margin-top: 10px;
+  width: 100% !important;
+}
+
+.todo-info {
+  flex: 6;
+}
+
+/* .create-button{
+  align-items: left;
+} */
+
+.input-info {
+  width: 550px;
+}
