@@ -77,13 +77,13 @@ body {
   }
 } */
 
-#logo {
+/* #logo {
   width: 10px;
   height: 10px;
   left: 70%;
   margin-bottom: 0;
   position: absolute;
-}
+} */
 
 .flex-container {
   display: flex;
