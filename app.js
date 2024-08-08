@@ -165,14 +165,14 @@ async function createTodo() {
         "description": description
     }
 
-    //post api call 
+   // POST API call to add a new todo
     const postTodoResponse = await apiCall("https://coding4all-todo.onrender.com/api/todo/new", "POST", bodyData);
     console.log("post todo ka response : ", postTodoResponse);
-
+    // Clear the content of the parent node
     parentNode.innerHTML = "";
-
+    // Fetch updated todos
     getTodos();
-
+    // Reset input fields for todo title and description
     document.getElementById("todo-title-input").value = "";
     document.getElementById("todo-description-input").value = "";
 
@@ -181,6 +181,7 @@ async function createTodo() {
 function setEditTodoId(todoId, title, description) {
     // $('#editModal').modal('show');
     console.log("edit horaha hai");
+    // Update the editTodoId variable
     editTodoId = todoId;
     document.getElementById("todo-title-edit-input").value = title;
     document.getElementById("todo-description-edit-input").value = description;
@@ -195,22 +196,23 @@ async function editTodo(editTodoId) {
         "title": title,
         "description": description
     }
-    //put request
+    // PUT request to update todo item
     const putTodoResponse = await apiCall(`https://coding4all-todo.onrender.com/api/todo/${editTodoId}`, "PUT", bodyData);
     console.log("post todo ka response : ", putTodoResponse);
-
+    // Clear the content of the parent node
     parentNode.innerHTML = "";
-
+    // Fetch updated todos
     getTodos();
-
+    // Reset variables
     editTodoId = "";
-
+    // Hide the edit modal
     $('#editModal').modal('hide');
+    // Clear input fields
     document.getElementById("todo-title-edit-input").value = "";
     document.getElementById("todo-description-edit-input").value = "";
 }
 
-
+//reset edit modal every time it is closed.
 function createEditModalClose() {
     document.getElementById("todo-title-edit-input").value = "";
     document.getElementById("todo-description-edit-input").value = "";
